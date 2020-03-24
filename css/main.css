@@ -1361,7 +1361,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6fb658;
+  background: #46aa2d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2216,6 +2216,13 @@ pre .javascript .function {
   to {
     transform: rotateZ(-30deg);
   }
+}
+.post-copyright {
+  background: var(--card-bg-color);
+  border-left: 3px solid #ff2a2a;
+  list-style: none;
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
 }
 .followme {
   align-items: center;
