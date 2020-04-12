@@ -4,7 +4,7 @@
     <title>模板 Touko 介绍</title>
     <url>/2020/04/12/touko-cls/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="模板类型">模板类型</h3>
-<p>这是一个中文 article 模板，是我日常用来做题用的，也可以用来做点笔记，至于为什么不制作成 book 模板，当然是因为技术力不够（哭）。同时模板不支持侧栏备注。</p>
+<p>这是一个中文 article 模板，是我日常用来做题用的，也可以用来做点笔记，至于为什么不制作成 book 模板，当然是因为技术力不够（哭）。同时模板不支持侧栏备注。<a id="more"></a></p>
 <h3 id="字体">字体</h3>
 <p>模板内置中文字体为思源宋体与思源黑体，英文衬线字体为 <code>HGB5X_CNKI</code> ，英文等宽字体为 <code>Fira Code</code>，如果没有这些字体的话可以将模板文件中的这几行删去，如果要安装可以上网搜索，这些字体除 <code>HGB5X_CNKI</code> 为 <code>win10</code>自带以外都是开源字体，可以免费下载。(下载的ttf,otf文件一定要右键然后选择给全体用户安装)</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\setCJKmainfont[BoldFont&#x3D;&#123;NotoSansCJKsc-Medium.otf&#125;]&#123;NotoSerifCJKsc-Regular.otf&#125;</span><br><span class="line">\setmainfont&#123;HGB5X_CNKI&#125;    %衬线字体  </span><br><span class="line">\setmonofont&#123;Fira Code&#125;     %等宽字体，一般是打印机字体(中文都是等宽的)</span><br></pre></td></tr></table></figure>
