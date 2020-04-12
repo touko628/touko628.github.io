@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/orange.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/orange.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/orange.ico">
+  <link rel="mask-icon" href="/images/orange.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Itim:300,300italic,400,400italic,700,700italic|Lobster:300,300italic,400,400italic,700,700italic|Noticia Text:300,300italic,400,400italic,700,700italic|Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"touko628.github.io","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="模板类型 这是一个中文 article 模板，是我日常用来做题用的，也可以用来做点笔记，至于为什么不制作成 book 模板，当然是因为技术力不够（哭）。同时模板不支持侧栏备注。 字体 模板内置中文字体为思源宋体与思源黑体，英文衬线字体为 HGB5X_CNKI ，英文等宽字体为 Fira Code，如果没有这些字体的话可以将模板文件中的这几行删去，如果要安装可以上网搜索，这些字体除 HGB5X">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模板 Touko 介绍">
+<meta property="og:url" content="http://touko628.github.io/2020/04/12/touko-cls/index.html">
+<meta property="og:site_name" content="Touko&#39;s Blog">
+<meta property="og:description" content="模板类型 这是一个中文 article 模板，是我日常用来做题用的，也可以用来做点笔记，至于为什么不制作成 book 模板，当然是因为技术力不够（哭）。同时模板不支持侧栏备注。 字体 模板内置中文字体为思源宋体与思源黑体，英文衬线字体为 HGB5X_CNKI ，英文等宽字体为 Fira Code，如果没有这些字体的话可以将模板文件中的这几行删去，如果要安装可以上网搜索，这些字体除 HGB5X">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/environment.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/code.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/code2.png">
+<meta property="article:published_time" content="2020-04-12T08:41:52.000Z">
+<meta property="article:modified_time" content="2020-04-12T08:46:31.788Z">
+<meta property="article:author" content="Touko">
+<meta property="article:tag" content="LaTeX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/environment.png">
+
+<link rel="canonical" href="http://touko628.github.io/2020/04/12/touko-cls/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>模板 Touko 介绍 | Touko's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Touko's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Touko Chyan</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>我の小屋</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于橙子</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签云</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>文章分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>时光机</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/touko628" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://touko628.github.io/2020/04/12/touko-cls/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/touko628/cdn@first/avatar2.webp">
+      <meta itemprop="name" content="Touko">
+      <meta itemprop="description" content="オレンジさん大勝利！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Touko's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          模板 Touko 介绍
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-12 16:41:52 / 修改时间：16:46:31" itemprop="dateCreated datePublished" datetime="2020-04-12T16:41:52+08:00">2020-04-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/technology/" itemprop="url" rel="index"><span itemprop="name">technology</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2020/04/12/touko-cls/" class="post-meta-item leancloud_visitors" data-flag-title="模板 Touko 介绍" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/04/12/touko-cls/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/12/touko-cls/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="模板类型">模板类型</h3>
+<p>这是一个中文 article 模板，是我日常用来做题用的，也可以用来做点笔记，至于为什么不制作成 book 模板，当然是因为技术力不够（哭）。同时模板不支持侧栏备注。</p>
+<h3 id="字体">字体</h3>
+<p>模板内置中文字体为思源宋体与思源黑体，英文衬线字体为 <code>HGB5X_CNKI</code> ，英文等宽字体为 <code>Fira Code</code>，如果没有这些字体的话可以将模板文件中的这几行删去，如果要安装可以上网搜索，这些字体除 <code>HGB5X_CNKI</code> 为 <code>win10</code>自带以外都是开源字体，可以免费下载。(下载的ttf,otf文件一定要右键然后选择给全体用户安装)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\setCJKmainfont[BoldFont&#x3D;&#123;NotoSansCJKsc-Medium.otf&#125;]&#123;NotoSerifCJKsc-Regular.otf&#125;</span><br><span class="line">\setmainfont&#123;HGB5X_CNKI&#125;    %衬线字体  </span><br><span class="line">\setmonofont&#123;Fira Code&#125;     %等宽字体，一般是打印机字体(中文都是等宽的)</span><br></pre></td></tr></table></figure>
+<h3 id="模板的一些默认设置">模板的一些默认设置</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\pagestyle&#123;plain&#125;</span><br><span class="line">\everymath&#123;\displaystyle&#125; % 行内公式使用行间公式字体</span><br><span class="line">\RequirePackage&#123;mathpazo&#125; % 数学字体，注释掉就是默认的 mtpro2</span><br></pre></td></tr></table></figure>
+<h3 id="模板的数学环境设置">模板的数学环境设置</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">% 数学环境, 定理等设置</span><br><span class="line">\newtheorem&#123;definition&#125;&#123;\gmcm@cap@definition&#125;</span><br><span class="line">\newtheorem&#123;theorem&#125;&#123;\gmcm@cap@theorem&#125;</span><br><span class="line">\newtheorem&#123;lemma&#125;&#123;\gmcm@cap@lemma&#125;</span><br><span class="line">\newtheorem&#123;property&#125;&#123;\gmcm@cap@property&#125;</span><br><span class="line">\newtheorem&#123;corollary&#125;&#123;\gmcm@cap@corollary&#125;</span><br><span class="line">\newtheorem&#123;assumption&#125;&#123;\gmcm@cap@assumption&#125;</span><br><span class="line">\newtheorem&#123;problem&#125;&#123;\gmcm@cap@problem&#125;</span><br><span class="line">\newtheorem&#123;example&#125;&#123;\gmcm@cap@example&#125;</span><br><span class="line"> </span><br><span class="line">%数学定理相关的常量</span><br><span class="line">\newcommand*&#123;\gmcm@cap@definition&#125;&#123;\color&#123;f8766d&#125;\makebox[-3pt][r]&#123;$\clubsuit$&#125;定义&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@theorem&#125;&#123;\color&#123;2a7ae2&#125;\makebox[-3pt][r]&#123;$\heartsuit$&#125;定理&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@lemma&#125;&#123;\color&#123;1a9850&#125;$ \Square  $引理&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@property&#125;&#123;\color&#123;ffa725&#125;$ \bigstar  $性质&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@corollary&#125;&#123;\color&#123;1a9850&#125;$ \Square  $推论&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@assumption&#125;&#123;\color&#123;6a3d9a&#125;$ \Square  $猜想&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@problem&#125;&#123;\color&#123;53a9ab&#125;\makebox[-3pt][r]&#123;\PencilRightDown\quad&#125;题&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@example&#125;&#123;\color&#123;53a9ab&#125;$ \Square  $例&#125;</span><br></pre></td></tr></table></figure>
+<p>设置了一些环境的字体的颜色与前缀标签，如</p>
+<figure>
+<img src="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/environment.png" alt="" /><figcaption>预览</figcaption>
+</figure>
+<h3 id="模板的代码环境">模板的代码环境</h3>
+<p>模板使用了两种代码环境</p>
+<ul>
+<li>通过 <code>lstlisting</code> 宏包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;lstlisting&#125;[language&#x3D;C]</span><br><span class="line">int main(int argc, char ** argv)&#123;</span><br><span class="line">	printf(&quot;Hello world!\n&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">\end&#123;lstlisting&#125;</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/code.png" alt="" /><figcaption>预览</figcaption>
+</figure>
+<p>对大部分语言代码提供了高亮，且支持行内代码段，有兴趣可以自己查看 <code>listings</code>宏包的说明文档，查看方式为在 cmd 中输入 <code>texdoc listings</code></p>
+<ul>
+<li>通过 <code>tcolorbox</code> 宏包定制的带盒子的代码块，同时提供了 <code>mycode</code> 环境可以在底下写注释，两个环境均支持中文。其具有更多的高亮，但是不支持行内模式。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;code&#125;&#123;cpp&#125;&#123;test&#125;</span><br><span class="line">int main(int argc, char ** argv)&#123;</span><br><span class="line">    printf(&quot;Hello world!\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">\end&#123;code&#125;</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/code2.png" alt="" /><figcaption>预览</figcaption>
+</figure>
+<p><font color="#FF0000">注意：</font> 此环境需要构建<code>minted</code> 环境支持，即需要有 <code>python</code> 才能正常使用，否则会报错。若不愿构建支持，在 <code>touko.cls</code> 文件中注释 <code>% 1.导入代码样式宏包 ，选择 minted 引擎</code> 的部分，启用 <code>%2.使用listings宏包，此处只使用其行内代码功能。</code> 之后的被注释的内容即可。</p>
+<p><code>minted</code> 环境 <a href="https://blog.csdn.net/u014454538/article/details/104283898" target="_blank" rel="noopener">搭建教程</a> 。</p>
+<h3 id="参考文献环境">参考文献环境</h3>
+<p>参考文献使用了 <code>gbt7714</code> 宏包，详情可以查看其说明文档（是中文哦），方法与 <code>listings</code> 相同</p>
+<h3 id="常规功能">常规功能</h3>
+<p>插图，长公式自动断行，强制表格位置，长表格(跨页)，三线表(可设计表头与表尾)，多图并排放置，表格中跨行，下划线， <span class="math inline">\(\mathbb{R}\)</span> ，超链接，首行缩进 等的相关宏包均有配置。</p>
+<h3 id="一些特殊功能宏包">一些特殊功能/宏包</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">\newcommand&#123;\md&#125;[1]&#123;&#123;\color&#123;purple&#125;#1&#125;&#125; % 定义了一个将文字变成紫色的指令，使用方法为\md&#123;你要染色的文字&#125;</span><br><span class="line"></span><br><span class="line">\usepackage&#123;extarrows&#125; % 定义了可加长箭头(可以在箭头上下写字)，包括</span><br><span class="line">%\xleftarrows,\xrightarrow,\xlongleftarrow,\xlongrightarrow,</span><br><span class="line">%\xLongleftarrow,\xLongrightarrow,\xleftrightarrow,</span><br><span class="line">%\xLeftrightarrow,\xlongleftrightarrow,\xLongleftrightarrow</span><br><span class="line">%\xlongequal 这个是长等号</span><br><span class="line"></span><br><span class="line">\usepackage&#123;bbding&#125; % 一些可爱的图标</span><br><span class="line"></span><br><span class="line">% 关于图片宏包graphicx，如果图片没有指定后缀, 依次按下列顺序搜索</span><br><span class="line">\DeclareGraphicsExtensions&#123;.pdf,.eps,.jpg,.png&#125;</span><br><span class="line"> </span><br><span class="line">% 设置图表搜索路径, 可以给图表文件夹取如下名字</span><br><span class="line">\graphicspath&#123;&#123;figures&#x2F;&#125;&#123;figure&#x2F;&#125;&#123;pictures&#x2F;&#125;&#123;picture&#x2F;&#125;&#123;pic&#x2F;&#125;&#123;pics&#x2F;&#125;&#123;image&#x2F;&#125;&#123;images&#x2F;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="结束">结束</h3>
+<p>第一次制作 <span class="math inline">\(\LaTeX\)</span> 模板，有很多地方处理不到位，注释写的还算详细，希望大家用的时候也依照自身需求修改吧。</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="https://cdn.jsdelivr.net/gh/touko628/cdn@first/Wepay.webp" alt="Touko 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="https://cdn.jsdelivr.net/gh/touko628/cdn@first/alipay.webp" alt="Touko 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Touko
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://touko628.github.io/2020/04/12/touko-cls/" title="模板 Touko 介绍">http://touko628.github.io/2020/04/12/touko-cls/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/mXbfp54c3H14DV1">
+            <span class="icon">
+              <i class="fa fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/touko305">
+            <span class="icon">
+              <i class="fa fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://cdn.jsdelivr.net/gh/touko628/cdn@first/WEchat.webp">
+            <span class="icon">
+              <i class="fa fa-wechat"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/LaTeX/" rel="tag"><i class="fa fa-tag"></i> LaTeX</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/24/%E5%91%95%E5%90%90/" rel="prev" title="Vomit">
+      <i class="fa fa-chevron-left"></i> Vomit
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板类型"><span class="nav-number">1.</span> <span class="nav-text">模板类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体"><span class="nav-number">2.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板的一些默认设置"><span class="nav-number">3.</span> <span class="nav-text">模板的一些默认设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板的数学环境设置"><span class="nav-number">4.</span> <span class="nav-text">模板的数学环境设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板的代码环境"><span class="nav-number">5.</span> <span class="nav-text">模板的代码环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文献环境"><span class="nav-number">6.</span> <span class="nav-text">参考文献环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常规功能"><span class="nav-number">7.</span> <span class="nav-text">常规功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些特殊功能宏包"><span class="nav-number">8.</span> <span class="nav-text">一些特殊功能&#x2F;宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束"><span class="nav-number">9.</span> <span class="nav-text">结束</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Touko"
+      src="https://cdn.jsdelivr.net/gh/touko628/cdn@first/avatar2.webp">
+  <p class="site-author-name" itemprop="name">Touko</p>
+  <div class="site-description" itemprop="description">オレンジさん大勝利！</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/touko628" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;touko628" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:z3537232098@gmail.com" title="E-Mail → mailto:z3537232098@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/mXbfp54c3H14DV1" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;mXbfp54c3H14DV1" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/touko305" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;touko305" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Telegram</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.chainwon.com/" title="https:&#x2F;&#x2F;www.chainwon.com" rel="noopener" target="_blank">轻惋导航</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://he-jiazhi.github.io/" title="https:&#x2F;&#x2F;he-jiazhi.github.io" rel="noopener" target="_blank">大腿一号</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Touko</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">5k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4 分钟</span>
+</div>
+ <!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+   -->
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i>
+  <span id="busuanzi_container_site_uv">
+    本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+  </span>
+  <span id="busuanzi_container_site_pv">
+      &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  </div>
+  </div>
+  <span class="post-meta-divider">|</span>
+<!--
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.2
+  </div>
+ -->
+
+        
+<div class="busuanzi-count">
+  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      script.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+<script pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : '2peT3fibNEBn0R2MGjk0vIQH-gzGzoHsz',
+      appKey     : 'KKmoBKL7E2enGuXoCCxOSE7O',
+      placeholder: "Just go go",
+      avatar     : 'identicon',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>

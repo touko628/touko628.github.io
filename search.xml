@@ -1,11 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>模板 Touko 介绍</title>
+    <url>/2020/04/12/touko-cls/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h3 id="模板类型">模板类型</h3>
+<p>这是一个中文 article 模板，是我日常用来做题用的，也可以用来做点笔记，至于为什么不制作成 book 模板，当然是因为技术力不够（哭）。同时模板不支持侧栏备注。</p>
+<h3 id="字体">字体</h3>
+<p>模板内置中文字体为思源宋体与思源黑体，英文衬线字体为 <code>HGB5X_CNKI</code> ，英文等宽字体为 <code>Fira Code</code>，如果没有这些字体的话可以将模板文件中的这几行删去，如果要安装可以上网搜索，这些字体除 <code>HGB5X_CNKI</code> 为 <code>win10</code>自带以外都是开源字体，可以免费下载。(下载的ttf,otf文件一定要右键然后选择给全体用户安装)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\setCJKmainfont[BoldFont&#x3D;&#123;NotoSansCJKsc-Medium.otf&#125;]&#123;NotoSerifCJKsc-Regular.otf&#125;</span><br><span class="line">\setmainfont&#123;HGB5X_CNKI&#125;    %衬线字体  </span><br><span class="line">\setmonofont&#123;Fira Code&#125;     %等宽字体，一般是打印机字体(中文都是等宽的)</span><br></pre></td></tr></table></figure>
+<h3 id="模板的一些默认设置">模板的一些默认设置</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\pagestyle&#123;plain&#125;</span><br><span class="line">\everymath&#123;\displaystyle&#125; % 行内公式使用行间公式字体</span><br><span class="line">\RequirePackage&#123;mathpazo&#125; % 数学字体，注释掉就是默认的 mtpro2</span><br></pre></td></tr></table></figure>
+<h3 id="模板的数学环境设置">模板的数学环境设置</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">% 数学环境, 定理等设置</span><br><span class="line">\newtheorem&#123;definition&#125;&#123;\gmcm@cap@definition&#125;</span><br><span class="line">\newtheorem&#123;theorem&#125;&#123;\gmcm@cap@theorem&#125;</span><br><span class="line">\newtheorem&#123;lemma&#125;&#123;\gmcm@cap@lemma&#125;</span><br><span class="line">\newtheorem&#123;property&#125;&#123;\gmcm@cap@property&#125;</span><br><span class="line">\newtheorem&#123;corollary&#125;&#123;\gmcm@cap@corollary&#125;</span><br><span class="line">\newtheorem&#123;assumption&#125;&#123;\gmcm@cap@assumption&#125;</span><br><span class="line">\newtheorem&#123;problem&#125;&#123;\gmcm@cap@problem&#125;</span><br><span class="line">\newtheorem&#123;example&#125;&#123;\gmcm@cap@example&#125;</span><br><span class="line"> </span><br><span class="line">%数学定理相关的常量</span><br><span class="line">\newcommand*&#123;\gmcm@cap@definition&#125;&#123;\color&#123;f8766d&#125;\makebox[-3pt][r]&#123;$\clubsuit$&#125;定义&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@theorem&#125;&#123;\color&#123;2a7ae2&#125;\makebox[-3pt][r]&#123;$\heartsuit$&#125;定理&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@lemma&#125;&#123;\color&#123;1a9850&#125;$ \Square  $引理&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@property&#125;&#123;\color&#123;ffa725&#125;$ \bigstar  $性质&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@corollary&#125;&#123;\color&#123;1a9850&#125;$ \Square  $推论&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@assumption&#125;&#123;\color&#123;6a3d9a&#125;$ \Square  $猜想&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@problem&#125;&#123;\color&#123;53a9ab&#125;\makebox[-3pt][r]&#123;\PencilRightDown\quad&#125;题&#125;</span><br><span class="line">\newcommand*&#123;\gmcm@cap@example&#125;&#123;\color&#123;53a9ab&#125;$ \Square  $例&#125;</span><br></pre></td></tr></table></figure>
+<p>设置了一些环境的字体的颜色与前缀标签，如</p>
+<figure>
+<img src="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/environment.png" alt="" /><figcaption>预览</figcaption>
+</figure>
+<h3 id="模板的代码环境">模板的代码环境</h3>
+<p>模板使用了两种代码环境</p>
+<ul>
+<li>通过 <code>lstlisting</code> 宏包</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;lstlisting&#125;[language&#x3D;C]</span><br><span class="line">int main(int argc, char ** argv)&#123;</span><br><span class="line">	printf(&quot;Hello world!\n&quot;);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">\end&#123;lstlisting&#125;</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/code.png" alt="" /><figcaption>预览</figcaption>
+</figure>
+<p>对大部分语言代码提供了高亮，且支持行内代码段，有兴趣可以自己查看 <code>listings</code>宏包的说明文档，查看方式为在 cmd 中输入 <code>texdoc listings</code></p>
+<ul>
+<li>通过 <code>tcolorbox</code> 宏包定制的带盒子的代码块，同时提供了 <code>mycode</code> 环境可以在底下写注释，两个环境均支持中文。其具有更多的高亮，但是不支持行内模式。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;code&#125;&#123;cpp&#125;&#123;test&#125;</span><br><span class="line">int main(int argc, char ** argv)&#123;</span><br><span class="line">    printf(&quot;Hello world!\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line">\end&#123;code&#125;</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="https://cdn.jsdelivr.net/gh/touko628/cdn@v1.1/code2.png" alt="" /><figcaption>预览</figcaption>
+</figure>
+<p><font color="#FF0000">注意：</font> 此环境需要构建<code>minted</code> 环境支持，即需要有 <code>python</code> 才能正常使用，否则会报错。若不愿构建支持，在 <code>touko.cls</code> 文件中注释 <code>% 1.导入代码样式宏包 ，选择 minted 引擎</code> 的部分，启用 <code>%2.使用listings宏包，此处只使用其行内代码功能。</code> 之后的被注释的内容即可。</p>
+<p><code>minted</code> 环境 <a href="https://blog.csdn.net/u014454538/article/details/104283898" target="_blank" rel="noopener">搭建教程</a> 。</p>
+<h3 id="参考文献环境">参考文献环境</h3>
+<p>参考文献使用了 <code>gbt7714</code> 宏包，详情可以查看其说明文档（是中文哦），方法与 <code>listings</code> 相同</p>
+<h3 id="常规功能">常规功能</h3>
+<p>插图，长公式自动断行，强制表格位置，长表格(跨页)，三线表(可设计表头与表尾)，多图并排放置，表格中跨行，下划线， <span class="math inline">\(\mathbb{R}\)</span> ，超链接，首行缩进 等的相关宏包均有配置。</p>
+<h3 id="一些特殊功能宏包">一些特殊功能/宏包</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\newcommand&#123;\md&#125;[1]&#123;&#123;\color&#123;purple&#125;#1&#125;&#125; % 定义了一个将文字变成紫色的指令，使用方法为\md&#123;你要染色的文字&#125;</span><br><span class="line"></span><br><span class="line">\usepackage&#123;extarrows&#125; % 定义了可加长箭头(可以在箭头上下写字)，包括</span><br><span class="line">%\xleftarrows,\xrightarrow,\xlongleftarrow,\xlongrightarrow,</span><br><span class="line">%\xLongleftarrow,\xLongrightarrow,\xleftrightarrow,</span><br><span class="line">%\xLeftrightarrow,\xlongleftrightarrow,\xLongleftrightarrow</span><br><span class="line">%\xlongequal 这个是长等号</span><br><span class="line"></span><br><span class="line">\usepackage&#123;bbding&#125; % 一些可爱的图标</span><br><span class="line"></span><br><span class="line">% 关于图片宏包graphicx，如果图片没有指定后缀, 依次按下列顺序搜索</span><br><span class="line">\DeclareGraphicsExtensions&#123;.pdf,.eps,.jpg,.png&#125;</span><br><span class="line"> </span><br><span class="line">% 设置图表搜索路径, 可以给图表文件夹取如下名字</span><br><span class="line">\graphicspath&#123;&#123;figures&#x2F;&#125;&#123;figure&#x2F;&#125;&#123;pictures&#x2F;&#125;&#123;picture&#x2F;&#125;&#123;pic&#x2F;&#125;&#123;pics&#x2F;&#125;&#123;image&#x2F;&#125;&#123;images&#x2F;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="结束">结束</h3>
+<p>第一次制作 <span class="math inline">\(\LaTeX\)</span> 模板，有很多地方处理不到位，注释写的还算详细，希望大家用的时候也依照自身需求修改吧。</p>
+]]></content>
+      <categories>
+        <category>technology</category>
+      </categories>
+      <tags>
+        <tag>LaTeX</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vomit</title>
     <url>/2020/03/24/%E5%91%95%E5%90%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>白底红花刻着喜的痰盂罐。第一罐呕吐物是红酒，和着咸菜和羊肉。<a id="more"></a> 平淡的一个夜晚。平淡地倒进抽水马桶。</p>
-<p>第二罐就不对了。先是怎么吐都是清水，突然，砰地一记，喉咙里长出一匹彩虹小马。用力！把我生出来！它尖叫。老俞笑嘻嘻。如果呕吐是把你生出来，以后我就要用屁眼吃饭了。但。来不及笑了，喉咙一阵阵抽搐。吐啊吐啊吐。洁白的光。铁锈的气息。非洲草原上奔驰的骏马。黄沙扬起，仰头长啸，加油啊老俞，我们中的害群之马就靠你呕吐了。肚皮剧烈动荡，感应，咕噜噜噜噜噜噜噜噜。我吐出了一头彩色小马。</p>
-<p>咩~~~伊这样叫。我吓坏了，掰开马嘴，掉出一只硕大的铁钉。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>呕吐。白底红花刻着喜的痰盂罐。第一罐呕吐物是红酒，和着咸菜和羊肉。<a id="more"></a> 平淡的一个夜晚。平淡地倒进抽水马桶。第二罐就不对了。先是怎么吐都是清水，突然，砰地一记，喉咙里长出一匹彩虹小马。用力！把我生出来！它尖叫。老俞笑嘻嘻。如果呕吐是把你生出来，以后我就要用屁眼吃饭了。但。来不及笑了，喉咙一阵阵抽搐。吐啊吐啊吐。洁白的光。铁锈的气息。非洲草原上奔驰的骏马。黄沙扬起，仰头长啸，加油啊老俞，我们中的害群之马就靠你呕吐了。肚皮剧烈动荡，感应，咕噜噜噜噜噜噜噜噜。我吐出了一头彩色小马。</p>
+<p>咩~伊这样叫。我吓坏了，掰开马嘴，掉出一只硕大的铁钉。</p>
 <p>我揪着彩虹小马的耳朵，手里拎着铁钉，站在屋顶。突然我能看清整个城市。一只只小房子，是火柴盒。蚂蚁匍匐。萤火虫在空中飞舞。亮。夜晚，比白昼更亮。</p>
 <p>我的意思是，在科大，活着这件事情，掌握在GPA，咖啡，数学分析，qq群聊，和美团外卖手中。任意一环炸了，你就炸了。肥西路炸了，世界没了。</p>
 <p>所以每天凌晨四点，大家登上教务系统，检查一下还有没有灵魂。</p>
